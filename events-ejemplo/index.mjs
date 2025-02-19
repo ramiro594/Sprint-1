@@ -1,15 +1,12 @@
-import { EventEmitter } from `events`
+import { EventEmitter } from "events";
 
-// crear una instancia de EventEmitter
+// Crear una instancia de EventEmitter
+const emisor = new EventEmitter();
 
-const emisor = new EventEmitter()
+// Definir un evento personalizado
+emisor.on("saludo", (nombre) => {
+  console.log(`¡Hola, ${nombre}!`);
+});
 
-// definir un evento personalizado
-
-emisor.on(`saludo`, (nombre)=>{
-    console.log(`hola ${nombre}`)
-})
-
-// emitir el evento "saludo"
-
-emisor.emit(`saludo`, `mundo`)
+// Emitir el evento 'saludo'
+emisor.emit("saludo", "mundo");

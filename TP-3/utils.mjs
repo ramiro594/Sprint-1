@@ -1,4 +1,4 @@
-import fs from `fs`
+import fs from "fs"
 
 // clase para representar un superheroe
 

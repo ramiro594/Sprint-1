@@ -1,20 +1,20 @@
-import path from `path`
+import path from "path";
 
-// definir una ruta de archivo de ejemplo
+// Define una ruta de archivo
+const filePath = "./data/example.txt";
 
-const filePath = `./data/example.txt`
+// Obtener el directorio base
+const dirName = path.dirname(filePath);
+console.log("Direccion base :", dirName);
 
-// obtener el directorio base
+// Obtener el nombre del archivo sin extension
+const baseName = path.basename(filePath, ".txt");
+console.log("Nombre del archivo", baseName);
 
-const dirName = path.dirName(filePath)
-console.log(`directorio base: `,baseName)
+// Obtener la extension del archivo
+const extName = path.extname(filePath);
+console.log("Extension del archivo", extName);
 
-// obtener la extension del archivo
-
-const extName = path.extName(filePath)
-console.log(`extension del archivo: `,extName)
-
-// crear una ruta unida
-
-const newPath = path.join(`/user`, `docs`, `newfile.txt`)
-console.log(`nueva ruta: `,newPath)
+// Crear ruta unida
+const newPatch = path.join("/user", "docs", "newfile.txt");
+console.log("Nueva ruta", newPatch);
